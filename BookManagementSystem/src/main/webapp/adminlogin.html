@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Login</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      width: 350px;
+    }
+
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .login-container label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    .login-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .login-container input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+
+    .login-container .register-link {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+    }
+
+    .login-container .register-link a {
+      text-decoration: none;
+      color: #007bff;
+    }
+
+    .login-container .register-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Admin Login</h2>
+    <form action="admlog" method="post">
+      <label for="admname">Admin Name:</label>
+      <input type="text" id="admname" name="admname" required>
+
+      <label for="admpass">Admin Password:</label>
+      <input type="password" id="admpass" name="admpass" required>
+
+      <input type="submit" value="Login" name="login">
+
+      <div class="register-link">
+        <a href="admin_register.html">New Admin? Register here</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

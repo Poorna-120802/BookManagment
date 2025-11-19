@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add Book</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+       background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .form-container {
+      background: #ffffff;
+      padding: 40px 30px;
+      border-radius: 10px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      width: 400px;
+    }
+
+    .form-container h3 {
+      text-align: center;
+      color: #333;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 12px;
+       background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h3>Enter the Book Details</h3>
+    <form action="add" method="get">
+      <div class="form-group">
+        <label for="id">Book ID:</label>
+        <input type="text" id="id" name="id" required>
+      </div>
+
+      <div class="form-group">
+        <label for="bookname">Book Name:</label>
+        <input type="text" id="bookname" name="bookname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="authorname">Author Name:</label>
+        <input type="text" id="authorname" name="authorname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" min="0" step="0.01" required>
+      </div>
+
+      <div class="form-group">
+        <label for="qty">Quantity:</label>
+        <input type="number" id="qty" name="qty" min="1" required>
+      </div>
+
+      <input type="submit" value="Add Book">
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Login</title>
+    <style>
+        /* Base Reset */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 40px 50px;
+            border-radius: 16px;
+            /*box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);*/
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .login-container:hover {
+            transform: translateY(-2px);
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 28px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #444;
+        }
+
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        input[type="email"]:focus,
+        input[type="password"]:focus {
+            border-color: #007BFF;
+            outline: none;
+        }
+
+        .button-group {
+            margin-top: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 12px 0;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: translateY(-2px);
+        }
+
+        .register-link {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #333;
+        }
+
+        .register-link a {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .register-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .login-container {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="login-container">
+    <h2>Customer Login</h2>
+    <form action="custlog" method="post">
+        <label for="name">Mail Id:</label>
+        <input type="email" id="name" name="mailid" placeholder="Enter your mail id" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+        <div class="button-group">
+            <input type="submit" value="Login">
+        </div>
+    </form>
+
+    <!-- Styled as a simple text link -->
+    <div class="register-link">
+        New Customer? <a href="customer_register.html">Register Here</a>
+    </div>
+</div>
+
+</body>
+</html>
